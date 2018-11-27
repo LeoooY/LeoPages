@@ -1,5 +1,8 @@
 # leopages
 
+## Creating and Updating GitHub Pages
+https://bytefish.de/blog/github_pages/
+
 ## Project setup
 ```
 npm install
