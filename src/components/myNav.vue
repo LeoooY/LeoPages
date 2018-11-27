@@ -98,8 +98,10 @@
         background-color: #fff;
         z-index: 100;
 
-        border-bottom: solid 1px #a1a1a1;
-        box-shadow: 0 1px 4px #bbb
+        /* border-bottom: solid 1px #a1a1a1;
+        box-shadow: 0 1px 4px #bbb */
+        /* google shadow */
+        box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
     }
 
     #header div {
