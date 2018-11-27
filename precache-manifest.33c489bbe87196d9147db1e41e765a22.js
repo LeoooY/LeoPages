@@ -8,20 +8,16 @@ self.__precacheManifest = [
     "url": "/LeoPages/js/chunk-vendors.4569fcbc.js"
   },
   {
-    "revision": "87cb255a741d92a02d5e",
-    "url": "/LeoPages/js/app.370687fe.js"
+    "revision": "12167aec577872966883",
+    "url": "/LeoPages/js/app.9dec6402.js"
   },
   {
     "revision": "6258ebe97852fd4411b2",
     "url": "/LeoPages/js/about.dbc2d5ba.js"
   },
   {
-    "revision": "481ac6b0d3c10716ef390138fdff8a5a",
+    "revision": "3935c97883d719ebe27bf34ddc580f89",
     "url": "/LeoPages/index.html"
-  },
-  {
-    "revision": "f1890b4af5ac15f9182697b29119eff7",
-    "url": "/LeoPages/img/arid-barren-daylight.f1890b4a.jpg"
   },
   {
     "revision": "6f0a76321d30f3c8120915e57f7bd77e",
@@ -36,7 +32,7 @@ self.__precacheManifest = [
     "url": "/LeoPages/css/chunk-vendors.6e808e7d.css"
   },
   {
-    "revision": "87cb255a741d92a02d5e",
-    "url": "/LeoPages/css/app.7ca9660b.css"
+    "revision": "12167aec577872966883",
+    "url": "/LeoPages/css/app.e3fe3461.css"
   }
 ];
