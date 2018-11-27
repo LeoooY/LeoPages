@@ -111,7 +111,10 @@
         height: 50px;
         /* width: 100% */
     }
-
+    #pcMenu li{
+        height: 50px;
+    }
+    
     #el-menu-demo {
         height: 50px;
         overflow: hidden;
