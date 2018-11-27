@@ -3,7 +3,9 @@
     <myNav></myNav>
 
     <div id="main">
-      <router-view></router-view>
+      <transition name="fade" mode="out-in">
+        <router-view></router-view>
+      </transition>
     </div>
   </div>
 </template>
@@ -13,9 +15,9 @@
 
   export default {
     name: 'app',
-    components: {      
+    components: {
       myNav,
-      
+
     }
   }
 </script>
@@ -27,10 +29,17 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    }
+  }
 
   #main {
     position: relative;
     top: 60px;
   }
+
+  .fade-enter-active, .fade-leave-active {
+  transition: opacity .1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>

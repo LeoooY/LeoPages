@@ -16,7 +16,7 @@
                 </el-col>
                 <el-col :span="6" class="hidden-md-and-down" id="el-menu-demo">
                     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect"
-                        id="pcMenu" :span="24">
+                        id="pcMenu" :span="24" menu-trigger="click">
 
 
 
