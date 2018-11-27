@@ -30,4 +30,18 @@ li {
 a {
   color: #42b983;
 }
+h1{
+  color: #acaeb0;
+    position: relative;
+    left: -9px;
+    top: -128px;
+    text-shadow: 0 0 3px #f6faff;
+}
+
+
+
+
+
+
+
 </style>
