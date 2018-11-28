@@ -6,12 +6,14 @@
                 <el-col id="head-more" :span="18">
 
 
-                    <el-col class="el-icon-more" :span="2" id="nav-more-dot" ></el-col>
-                    <el-col :span="1" >
+                    <el-col :span="2">
+                        <span class="el-icon-more" id="nav-more-dot" @click="showDrawer =! showDrawer"></span>
+                    </el-col>
+                    <el-col :span="1">
                         <span @click="toHome()" id="nav-home-pages">
                             <strong>LEO</strong>Pages
                         </span>
-                        
+
                     </el-col>
                 </el-col>
                 <el-col :span="6" class="hidden-md-and-down" id="el-menu-demo">
@@ -47,11 +49,17 @@
 
                 </el-col>
             </el-row>
-
-
-
-
         </div>
+
+        <transition name="MaskShow" mode="out-in">
+            <div id="mask" v-if="showDrawer" @click="showDrawer =! showDrawer"></div>
+        </transition>
+        <transition name="DrawerShow" mode="out-in">
+            <div id="Drawer" v-if="showDrawer" :span="8"></div>
+        </transition>
+
+
+    </div>
 
     </div>
 </template>
@@ -64,19 +72,24 @@
         name: 'myNav',
         data() {
             return {
+                showDrawer: false,
                 activeIndex: '',
             }
         },
 
         methods: {
+            changeShowDrawer() {
+                console.log("mask")
+                this.showDrawer = !this.showDrawer;
+            },
             jumpGithub() {
 
                 window.open("https://github.com/LeoooY/LeoPages");
             },
-            toHome(){
+            toHome() {
                 this.$router.push('/');
             },
-            toAbout(){
+            toAbout() {
                 this.$router.push('/about');
             },
             handleSelect(key, keyPath) {
@@ -101,7 +114,7 @@
         /* border-bottom: solid 1px #a1a1a1;
         box-shadow: 0 1px 4px #bbb */
         /* google shadow */
-        box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+        box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
     }
 
     #header div {
@@ -113,10 +126,11 @@
         height: 50px;
         /* width: 100% */
     }
-    #pcMenu li{
+
+    #pcMenu li {
         height: 50px;
     }
-    
+
     #el-menu-demo {
         height: 50px;
         overflow: hidden;
@@ -126,11 +140,13 @@
         padding: 20px;
         height: 50px;
     }
+
     #mobileMenu:hover {
         cursor: pointer;
         padding: 20px;
         height: 50px;
     }
+
     #head-more {
         display: inline-block;
     }
@@ -140,10 +156,59 @@
         padding: 20px;
     }
 
-    #nav-more-dot:hover{
+    #nav-more-dot:hover {
         cursor: pointer;
     }
-    #nav-home-pages:hover{
+
+    #nav-home-pages:hover {
         cursor: pointer;
     }
+
+    #mask {
+        position: fixed;
+        background: rgba(55, 55, 55, .6);
+        height: 800px;
+        width: 1600px;
+        z-index: 1000;
+        top: 0;
+        overflow: auto;
+    }
+
+    #Drawer {
+        position: fixed;
+        height: 900px;
+        width: 300px;
+        background: #fff;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    }
+
+    .DrawerShow-enter-active,
+    .DrawerShow-leave-active {
+        transition: all 0.3s;
+    }
+    .DrawerShow-enter,
+    .DrawerShow-leave-to
+
+    /* .list-leave-active for below version 2.1.8 */
+        {
+        opacity: .1s;
+        transform: translateX(-300px);
+    }
+
+    .MaskShow-enter-active,
+    .MaskShow-leave-active {
+        transition: all  0.2s;               
+    }
+    .MaskShow-enter,
+    .MaskShow-leave-to
+    /* .fade-leave-active below version 2.1.8 */
+    {
+        /* 透明度 */
+        opacity: .1;
+        
+    }
+
+
+    
 </style>

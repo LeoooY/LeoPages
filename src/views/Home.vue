@@ -4,31 +4,34 @@
         <img alt="Vue logo"  width="100%" height="500px" id="homePic" src="../assets/tinified/arid-barren-daylight.jpg">
     
     
+    <el-button @click="showBox = !showBox">Move</el-button>
+    <transition name="showBox" mode="out-in">
+      <el-row style="margin: 0 45px 20px 45px" :gutter="10" id="box-two" v-if="showBox">
+        <el-col :span="12" :xs="24" >
+          <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span>Title 标题</span>
+              <el-button style="float: right; padding: 3px 0" type="text">操作</el-button>
+            </div>
+            <div v-for="o in 7" :key="o" class="text item">
+              {{'内容 ' + o }}
+            </div>
+          </el-card>
+        </el-col>
+        <el-col :span="12" :xs="24" >
+          <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span>Title 标题</span>
+              <el-button style="float: right; padding: 3px 0" type="text">操作</el-button>
+            </div>
+            <div v-for="o in 7" :key="o" class="text item">
+              {{'内容 ' + o }}
+            </div>
+          </el-card>
+        </el-col>
+      </el-row>
+    </transition>
     
-    <el-row style="margin: 0 45px 20px 45px" :gutter="10" id="box-two">
-      <el-col :span="12" :xs="24" >
-        <el-card class="box-card">
-          <div slot="header" class="clearfix">
-            <span>Title 标题</span>
-            <el-button style="float: right; padding: 3px 0" type="text">操作</el-button>
-          </div>
-          <div v-for="o in 7" :key="o" class="text item">
-            {{'内容 ' + o }}
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="12" :xs="24" >
-        <el-card class="box-card">
-          <div slot="header" class="clearfix">
-            <span>Title 标题</span>
-            <el-button style="float: right; padding: 3px 0" type="text">操作</el-button>
-          </div>
-          <div v-for="o in 7" :key="o" class="text item">
-            {{'内容 ' + o }}
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
     <el-row>
       <el-col :span="24" id="box-one">
         <el-card class="box-card">
@@ -57,7 +60,7 @@
     name: 'home',
     data() {
       return {
-
+        showBox:false,
       }
     },
     components: {
@@ -111,4 +114,13 @@
     
     box-shadow: 0px 2px 5px 3px #110c0c;
   }
+
+  .showBox-enter-active, .showBox-leave-active {
+  transition: all 0.3s;
+}
+.showBox-enter, .showBox-leave-to
+/* .list-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(-100px);
+}
 </style>
