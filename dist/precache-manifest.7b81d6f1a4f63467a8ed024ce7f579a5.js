@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/LeoPages/robots.txt"
   },
   {
-    "revision": "d423b8c879ac15cfefde",
-    "url": "/LeoPages/js/app.3cf457f7.js"
+    "revision": "08e0b74c61bfe7316e0d",
+    "url": "/LeoPages/js/app.e4ffcae8.js"
   },
   {
-    "revision": "48b848a5b78c918dcaea",
-    "url": "/LeoPages/js/about.88dbebb7.js"
+    "revision": "e05c2e595f7b3573b71e",
+    "url": "/LeoPages/js/about.a63fc627.js"
   },
   {
-    "revision": "a52d7691c778603de06b7b96b70506dd",
+    "revision": "45eb0f3bacb92446dffcd729da11d223",
     "url": "/LeoPages/index.html"
   },
   {
@@ -36,11 +36,11 @@ self.__precacheManifest = [
     "url": "/LeoPages/css/chunk-vendors.6e808e7d.css"
   },
   {
-    "revision": "d423b8c879ac15cfefde",
-    "url": "/LeoPages/css/app.4f496a18.css"
+    "revision": "08e0b74c61bfe7316e0d",
+    "url": "/LeoPages/css/app.5a86deff.css"
   },
   {
-    "revision": "48b848a5b78c918dcaea",
-    "url": "/LeoPages/css/about.294396d1.css"
+    "revision": "e05c2e595f7b3573b71e",
+    "url": "/LeoPages/css/about.f40704c6.css"
   }
 ];
