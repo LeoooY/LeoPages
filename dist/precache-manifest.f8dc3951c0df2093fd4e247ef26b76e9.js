@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/LeoPages/robots.txt"
   },
   {
-    "revision": "08e0b74c61bfe7316e0d",
-    "url": "/LeoPages/js/app.e4ffcae8.js"
+    "revision": "55b0bfd8af6ed99b4d13",
+    "url": "/LeoPages/js/app.6feb073c.js"
   },
   {
     "revision": "e05c2e595f7b3573b71e",
     "url": "/LeoPages/js/about.a63fc627.js"
   },
   {
-    "revision": "45eb0f3bacb92446dffcd729da11d223",
+    "revision": "6c5228e8177bf606be0f06d2566eb858",
     "url": "/LeoPages/index.html"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/LeoPages/css/chunk-vendors.6e808e7d.css"
   },
   {
-    "revision": "08e0b74c61bfe7316e0d",
-    "url": "/LeoPages/css/app.5a86deff.css"
+    "revision": "55b0bfd8af6ed99b4d13",
+    "url": "/LeoPages/css/app.6c34687d.css"
   },
   {
     "revision": "e05c2e595f7b3573b71e",

@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" >
     <myNav></myNav>
-
+    
     <div id="main">
       <transition name="fade" mode="out-in">
         <router-view></router-view>
@@ -15,6 +15,20 @@
 
   export default {
     name: 'app',
+    data () {
+      return {
+        // bodyOverFlow:this.$store.state.bodyOverFlow,
+      }
+    },
+    computed: {
+      
+    
+      // bodyOverFlow(){
+      //   console.log('log...');
+      //   console.log(this.$store.state.bodyOverflow)
+      //   return this.$store.state.bodyOverflow;
+      // }
+    },
     components: {
       myNav,
 
@@ -26,6 +40,9 @@
   body,html{
     padding: 0;
     margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -33,12 +50,14 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    
+    height: 100%;
+    overflow: auto;
   }
 
   #main {
     position: relative;
     top: 50px;
+    
   }
 
   .fade-enter-active, .fade-leave-active {

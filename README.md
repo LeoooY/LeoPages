@@ -6,6 +6,7 @@
 - [Element](http://element-cn.eleme.io/#/zh-CN/component/layout)
 
 ## 部署到 GithubPages
+0 build 
 
 (更新部署先删除GitHub上gh-pages分支)
 git add dist && git commit -m "Initial dist subtree commit"

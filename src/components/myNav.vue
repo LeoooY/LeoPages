@@ -61,7 +61,7 @@
 
     </div>
 
-    </div>
+    
 </template>
 
 <script>
@@ -171,7 +171,7 @@
         width: 1600px;
         z-index: 1000;
         top: 0;
-        overflow: auto;
+         
     }
 
     #Drawer {
