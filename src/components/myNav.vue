@@ -24,10 +24,10 @@
 
 
                         <el-submenu index="2" class="nav-submenu">
-                            <template slot="title">Menu</template>
+                            <template slot="title">更多</template>
 
-                            <el-menu-item index="2-1" @click="toAbout()">选项1</el-menu-item>
-                            <el-menu-item index="2-2">选项2</el-menu-item>
+                            <el-menu-item index="2-1" @click="toAbout()">测试页面About</el-menu-item>
+                            <el-menu-item index="2-2" @click="jumpCanvas">CanvasDemo</el-menu-item>
                             <el-menu-item index="2-3">选项3</el-menu-item>
                             <el-submenu index="2-4">
                                 <template slot="title">选项4</template>
@@ -37,7 +37,7 @@
                             </el-submenu>
                         </el-submenu>
 
-                        <el-menu-item index="3">消息中心</el-menu-item>
+                        <el-menu-item index="3">测试</el-menu-item>
 
                         <el-menu-item index="4">
                             <el-button type="text" @click="jumpGithub">Github</el-button>
@@ -85,6 +85,9 @@
             jumpGithub() {
 
                 window.open("https://github.com/LeoooY/LeoPages");
+            },
+            jumpCanvas(){
+                window.open('https://leoooy.github.io/CanvasDemo');
             },
             toHome() {
                 this.$router.push('/');
@@ -167,7 +170,7 @@
     #mask {
         position: fixed;
         background: rgba(55, 55, 55, .6);
-        height: 800px;
+        height: 1500px;
         width: 1600px;
         z-index: 1000;
         top: 0;
@@ -176,7 +179,7 @@
 
     #Drawer {
         position: fixed;
-        height: 900px;
+        height: 1500px;
         width: 300px;
         background: #fff;
         z-index: 1000;

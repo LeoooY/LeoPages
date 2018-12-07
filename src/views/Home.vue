@@ -1,7 +1,22 @@
 <template>
   <div class="home">
-    
-        <img alt="Vue logo"  width="100%" height="500px" id="homePic" src="../assets/tinified/arid-barren-daylight.jpg">
+    <div  id="home-pic" >
+      <el-carousel interval="7000" trigger="click" arrow="always" height="500px">
+        <el-carousel-item  :key="1">
+          <img alt="HomePic"  width="100%" height="500px" src="../assets/tinified/arid-barren-daylight.jpg">
+        </el-carousel-item>
+        <el-carousel-item  :key="2">
+          <img alt="HomePic"  width="100%" height="500px" src="../assets/tinified/astronomy-constellation-constellations.jpg">
+        </el-carousel-item>
+        <el-carousel-item  :key="3">
+          <img alt="HomePic"  width="100%" height="500px" src="../assets/tinified/beautiful-cold-dawn-.jpg">
+        </el-carousel-item>
+        <el-carousel-item  :key="4">
+          <img alt="HomePic"  width="100%" height="500px" src="../assets/tinified/sunset.jpg">
+        </el-carousel-item>
+      </el-carousel>
+    </div>
+        
     
     
     <el-button @click="showBox = !showBox">Move</el-button>
@@ -108,12 +123,14 @@
   #box-one .box-card{
     height: 400px;
   }
-  #homePic{
+  #home-pic{
+    height: 500px;
     margin-bottom: 30px;
     border-radius: 1%;
     
     box-shadow: 0px 2px 5px 3px #110c0c;
   }
+ 
 
   .showBox-enter-active, .showBox-leave-active {
   transition: all 0.3s;
