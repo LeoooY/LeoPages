@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/LeoPages/precache-manifest.f8dc3951c0df2093fd4e247ef26b76e9.js"
+  "/LeoPages/precache-manifest.b24b7858503d66aa4036af8c29efb098.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "leopages"});
