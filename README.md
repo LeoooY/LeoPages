@@ -1,3 +1,5 @@
+
+
 # leopages
 - [Preview](https://leoooy.github.io/LeoPages/#/)
 ## 资源
@@ -40,3 +42,5 @@ npm run test
 ```
 npm run lint
 ```
+## 踩坑记录
+- el-col元素上获取不到事件，需要在内嵌元素内获取事件

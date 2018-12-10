@@ -45,9 +45,13 @@
                     </el-menu>
                 </el-col>
 
-                <el-col class="el-icon-menu hidden-lg-only" id="mobileMenu" :span="6">
-
+                <el-col class=" hidden-lg-only" 
+                        id="mobileMenu" 
+                        :span="5" :push="2" 
+                         >
+                        <span class="el-icon-menu" @click="showMenu = ! showMenu"></span>
                 </el-col>
+                
             </el-row>
         </div>
 
@@ -58,6 +62,7 @@
             <div id="Drawer" v-if="showDrawer" :span="8"></div>
         </transition>
 
+        <mobileMenu :showMenu="showMenu" ></mobileMenu>
 
     </div>
 
@@ -66,7 +71,7 @@
 
 <script>
     import 'element-ui/lib/theme-chalk/display.css'
-
+    import mobileMenu from './mobileMenu.vue'
 
     export default {
         name: 'myNav',
@@ -74,11 +79,19 @@
             return {
                 showDrawer: false,
                 activeIndex: '',
+                showMenu:false,
             }
         },
-
+        components: {
+            mobileMenu,
+        },
         methods: {
+            // showMenu(){
+                
+            //     console.log('点击');
+            // },
             changeShowDrawer() {
+                
                 console.log("mask")
                 this.showDrawer = !this.showDrawer;
             },

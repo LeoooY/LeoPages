@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import myNav from './components/myNav.vue'
+  import myNav from './components/NavBar/myNav.vue'
 
   export default {
     name: 'app',

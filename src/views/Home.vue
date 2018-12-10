@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div  id="home-pic" >
-      <el-carousel interval="7000" trigger="click" arrow="always" height="500px">
+      <el-carousel :interval="7000" trigger="click" arrow="always" height="500px">
         <el-carousel-item  :key="1">
           <img alt="HomePic"  width="100%" height="500px" src="../assets/tinified/arid-barren-daylight.jpg">
         </el-carousel-item>
@@ -19,7 +19,7 @@
         
     
     
-    <el-button @click="showBox = !showBox">Move</el-button>
+    <el-button @click="showBox = !showBox">Remove</el-button>
     <transition name="showBox" mode="out-in">
       <el-row style="margin: 0 45px 20px 45px" :gutter="10" id="box-two" v-if="showBox">
         <el-col :span="12" :xs="24" >
@@ -62,7 +62,7 @@
     </el-row>
 
     <el-row id="footer" style="background: rgb(54, 50, 50);height: 300px; padding: 0;margin: 0;color: #FFF;">
-        <p><strong>This is a Footer</strong></p>
+        <p><strong>到底啦</strong></p>
     </el-row>
   </div>
 </template>
@@ -75,7 +75,7 @@
     name: 'home',
     data() {
       return {
-        showBox:false,
+        showBox:true,
       }
     },
     components: {
