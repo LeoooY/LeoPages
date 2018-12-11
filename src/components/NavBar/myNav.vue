@@ -10,14 +10,15 @@
                         <span class="el-icon-more" id="nav-more-dot" @click="showDrawer =! showDrawer"></span>
                     </el-col>
                     <el-col :span="1">
-                        <span @click="toHome()" id="nav-home-pages">
+                        <span @click="jumpToHome()" id="nav-home-pages">
                             <strong>LEO</strong>Pages
                         </span>
 
                     </el-col>
                 </el-col>
-                <el-col :span="6" class="hidden-md-and-down" id="el-menu-demo">
-                    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect"
+
+                <el-col :span="6" class="hidden-md-and-down" id="pcMenu-container">
+                    <el-menu :default-active="activeIndex"  mode="horizontal" @select="handleSelect"
                         id="pcMenu" :span="24" menu-trigger="click">
 
 
@@ -26,8 +27,8 @@
                         <el-submenu index="2" class="nav-submenu">
                             <template slot="title">更多</template>
 
-                            <el-menu-item index="2-1" @click="toAbout()">测试页面About</el-menu-item>
-                            <el-menu-item index="2-2" @click="jumpCanvas">CanvasDemo</el-menu-item>
+                            <el-menu-item index="2-1" @click="jumpToAbout()">测试页面About</el-menu-item>
+                            <el-menu-item index="2-2" @click="jumpToCanvas()">CanvasDemo</el-menu-item>
                             <el-menu-item index="2-3">选项3</el-menu-item>
                             <el-submenu index="2-4">
                                 <template slot="title">选项4</template>
@@ -40,15 +41,14 @@
                         <el-menu-item index="3">测试</el-menu-item>
 
                         <el-menu-item index="4">
-                            <el-button type="text" @click="jumpGithub">Github</el-button>
+                            <el-button type="text" @click="jumpToGithub">Github</el-button>
                         </el-menu-item>
                     </el-menu>
                 </el-col>
 
                 <el-col class=" hidden-lg-only" 
-                        id="mobileMenu" 
-                        :span="5" :push="2" 
-                         >
+                        id="mobileMenu-container" 
+                        :span="5" :push="2">
                         <span class="el-icon-menu" @click="showMenu = ! showMenu"></span>
                 </el-col>
                 
@@ -62,7 +62,10 @@
             <div id="Drawer" v-if="showDrawer" :span="8"></div>
         </transition>
 
-        <mobileMenu :showMenu="showMenu" ></mobileMenu>
+        <transition name="MobileMenu" mode="out-in">
+            <mobileMenu :showMenu="showMenu" v-if="showMenu"></mobileMenu>    
+        </transition>
+        
 
     </div>
 
@@ -95,17 +98,17 @@
                 console.log("mask")
                 this.showDrawer = !this.showDrawer;
             },
-            jumpGithub() {
+            jumpToGithub() {
 
                 window.open("https://github.com/LeoooY/LeoPages");
             },
-            jumpCanvas(){
+            jumpToCanvas(){
                 window.open('https://leoooy.github.io/CanvasDemo');
             },
-            toHome() {
+            jumpToHome() {
                 this.$router.push('/');
             },
-            toAbout() {
+            jumpToAbout() {
                 this.$router.push('/about');
             },
             handleSelect(key, keyPath) {
@@ -147,17 +150,17 @@
         height: 50px;
     }
 
-    #el-menu-demo {
+    #pcMenu-container {
         height: 50px;
         overflow: hidden;
     }
 
-    #mobileMenu {
+    #mobileMenu-container {
         padding: 20px;
         height: 50px;
     }
 
-    #mobileMenu:hover {
+    #mobileMenu-container:hover {
         cursor: pointer;
         padding: 20px;
         height: 50px;
@@ -208,7 +211,7 @@
 
     /* .list-leave-active for below version 2.1.8 */
         {
-        opacity: .1s;
+        /* opacity: .1s; */
         transform: translateX(-300px);
     }
 
@@ -225,6 +228,18 @@
         
     }
 
+    .MobileMenu-enter-active,
+    .MobileMenu-leave-active {
+        transition: all 0.3s;
+    }
+    .MobileMenu-enter,
+    .MobileMenu-leave-to
 
+    /* .list-leave-active for below version 2.1.8 */
+        {
+        /* opacity: .1s; */
+        transform: translateY(-200px);
+    }
+    
     
 </style>

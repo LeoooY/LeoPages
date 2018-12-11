@@ -44,3 +44,4 @@ npm run lint
 ```
 ## 踩坑记录
 - el-col元素上获取不到事件，需要在内嵌元素内获取事件
+- 使用Prop传递v-if的flag情况下，trasition会出现异常，所以慎重考虑trasition状态的props传递
