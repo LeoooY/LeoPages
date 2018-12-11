@@ -12,16 +12,16 @@ self.__precacheManifest = [
     "url": "/LeoPages/img/arid-barren-daylight.b660f4a0.jpg"
   },
   {
-    "revision": "84caf0d58b5f34c43a89",
-    "url": "/LeoPages/css/app.9a98579e.css"
+    "revision": "0112f9ac23cee5bf59d3",
+    "url": "/LeoPages/css/app.f02c3a66.css"
   },
   {
-    "revision": "03146d750b19a4de63d8",
+    "revision": "a775f49c90c299bb5bd2",
     "url": "/LeoPages/css/chunk-vendors.6e808e7d.css"
   },
   {
-    "revision": "03146d750b19a4de63d8",
-    "url": "/LeoPages/js/chunk-vendors.4569fcbc.js"
+    "revision": "a775f49c90c299bb5bd2",
+    "url": "/LeoPages/js/chunk-vendors.604ff502.js"
   },
   {
     "revision": "ca0819c23691d35ab27ef3e2e33bb484",
@@ -36,24 +36,24 @@ self.__precacheManifest = [
     "url": "/LeoPages/fonts/element-icons.2fad952a.woff"
   },
   {
-    "revision": "b24c934b0f4fa7074dc6",
-    "url": "/LeoPages/js/about.16c64bb2.js"
+    "revision": "7d3419cf2c41d0b8b6c5",
+    "url": "/LeoPages/js/about.2f21db4a.js"
   },
   {
-    "revision": "84caf0d58b5f34c43a89",
-    "url": "/LeoPages/js/app.ae50a5bd.js"
+    "revision": "0112f9ac23cee5bf59d3",
+    "url": "/LeoPages/js/app.98f09489.js"
   },
   {
     "revision": "4af8d2415fd1e79e244a364c85bf71e3",
     "url": "/LeoPages/img/astronomy-constellation-constellations.4af8d241.jpg"
   },
   {
-    "revision": "38ab7bf994352b1a716194e9d71b6582",
+    "revision": "4e8f60cc03e99f0bed131fd41ac791c7",
     "url": "/LeoPages/index.html"
   },
   {
-    "revision": "b24c934b0f4fa7074dc6",
-    "url": "/LeoPages/css/about.ecfb0faf.css"
+    "revision": "7d3419cf2c41d0b8b6c5",
+    "url": "/LeoPages/css/about.af9c4c2f.css"
   },
   {
     "revision": "352b2c9ce9f489988c37559395f42ecf",
